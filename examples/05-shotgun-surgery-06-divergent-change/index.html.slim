@@ -1,0 +1,7 @@
+h2 Posts
+
+- if @posts.present?
+  dl
+    @posts.each do |post|
+      dt = "#{@post.title}"
+      dd = DateTime.new(post.year.to_i, post.month.to_i, post.day.to_i).to_s(:short)

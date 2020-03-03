@@ -1,0 +1,4 @@
+<li>
+   Потраченная за все время сумма:
+   <%= @client_tickets.sum(&:total_cost_with_bonus) %>
+</li>

@@ -1,0 +1,5 @@
+.avatar
+  - profile_image_url = case session[:logged]
+  - when 2 then "https://graph.facebook.com/#{session[:id]}/picture?type=square"
+  - when 3 then session[:photo_url]
+  - else 'default_avatar.png'

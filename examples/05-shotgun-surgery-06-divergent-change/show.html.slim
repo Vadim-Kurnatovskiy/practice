@@ -1,0 +1,13 @@
+h3 = @post.title
+
+.content = simple_format @post.body
+
+hr
+
+.detail
+  .date = DateTime.new(@post.year.to_i, @post.month.to_i, @post.day.to_i).to_s(:long)
+
+- if @post.comments.present?
+  ul
+    @post.comment.each do |comment|
+      li = "#{comment.body} | #{DateTime.new(comment.year.to_i, comment.month.to_i, comment.day.to_i).to_s(:short)}"
